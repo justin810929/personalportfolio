@@ -1,0 +1,336 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes jello {
+  from, 11.1%, to {
+    transform: none;
+  }
+
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 50%, 0);
+  }
+}
+.clearfix{
+  clear:both;
+}
+.wrap{
+  margin: 0 auto 0 auto;
+  width: 1200px;
+}
+.header{
+  animation: fadeIn linear 0.1s;
+}
+.backtotop{
+  padding:20px 10px 25px 10px;
+  width:40px;
+  height:15px;
+  background: linear-gradient(#233a5b,#0b0c0c);
+  position: absolute;
+  position: fixed;
+  bottom:0;
+  right:0;
+  border-radius: 10%;
+  border-width: 2px;
+  border: solid gray;
+  font-family: 'Bitter', serif;
+  text-align: center;
+  color: white;
+  z-index: 1000;
+}
+.backtotop:hover{
+  background: linear-gradient(#0044BB,#0066FF);
+  font-size: 20px;
+}
+.backtotop a{
+  display: block;
+}
+.item div{
+  float: right;
+	width: 10%;
+	height: 50px;
+  padding:20px 3px 30px 3px;
+  text-align: center;
+  box-sizing: border-box;
+  background: linear-gradient(#AAAAAA,#444444);
+  border-right: #444444;
+  border-style: solid;
+  border-width: 1px;
+}
+.item a{
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+.item div:hover{
+	background: linear-gradient(#5599FF,#003C9D);
+	font-size: 20px;
+	border-bottom: solid #bf2c0a;
+	cursor: pointer;
+}
+.projectTitle{
+  margin: 0 auto 0 auto;
+  width: 330px;
+  text-align: center;
+  font-size: 35px;
+  text-shadow: 2px 2px grey;
+  color: black;
+  border-width: 4px;
+  border-bottom: #00BBFF solid;
+}
+.banner{
+  float: left;
+  width:80%;
+  height: 52px;
+  background: linear-gradient(#AAAAAA,#444444);
+  padding-left: 480px;
+  box-sizing: border-box;
+  border-right: #444444;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+}
+.banner img{
+  display: inline-block;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+.banner h1{
+  display: inline-block;
+  color: white;
+  font-size: 150%;
+}
+.content {
+  background-repeat: no-repeat;
+  height: 650px;
+  animation: fadeIn linear 1s;
+}
+
+.NextCpbutton{
+  display: block;
+  box-sizing: border-box;
+  padding: 15px 10px 10px 15px;
+  height: 40px;
+  width: 190px;
+  position: absolute;
+  margin-left: -280px;
+  margin-top: 50px;
+  border-radius: 10px;
+  background: linear-gradient(#AAAAAA,#444444);
+  box-shadow: 2px 2px #0044BB;
+  display: block;
+  animation:slideOutDown 2s linear infinite;
+}
+.NextCpbutton:hover{
+  box-sizing: border-box;
+  padding: 15px 10px 10px 15px;
+  height: 40px;
+  width: 190px;
+  position: absolute;
+  margin-left: -280px;
+  margin-top: 60px;
+  border-radius: 10px;
+  background: linear-gradient(#5599FF,#003C9D);
+  box-shadow: 2px 2px #0044BB;
+  cursor: pointer;
+  animation: none;
+}
+.storyF{
+  height: 680px;
+  width: 1200px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.Storycontent{
+  margin-top: 20px;
+  margin-right: 50px;
+  float: right;
+  width: 1100px;
+  height: 200px;
+  background-color: #DDDDDD;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+.Storycontent p{
+  line-height: 35px;
+  padding-left: 20px;
+}
+.UIflowTitle {
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+.largeContent{
+  padding:5px 5px 5px 8px;
+  margin-top: 15px;
+  margin-right: 50px;
+  float: right;
+  width: 1100px;
+  height: 150px;
+  background-color: #DDDDDD;
+  opacity: 0.9;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.largeContent p{
+  margin-top: 20px;
+}
+
+.largeContent2 {
+  padding:5px 5px 5px 8px;
+  margin-top: 15px;
+  margin-right: 50px;
+  float: right;
+  width: 1100px;
+  height: 200px;
+  background-color: #DDDDDD;
+  opacity: 0.9;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.largeContent2 p{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
